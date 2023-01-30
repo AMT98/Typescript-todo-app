@@ -9,7 +9,12 @@ const TodoList: React.FC<TodoListProps> = (props) => {
   return (
     <div className="flex flex-col w-6/12 flex-wrap ">
       {props.todos.map((todo) => (
-        <li className="border text-center list-none text-2xl text-white rounded-2xl m-4 p-4">{todo.todo}</li>
+        <li
+          className="border text-center list-none text-2xl text-white rounded-2xl m-4 p-4"
+          key={todo.id }
+        >
+          {todo.todo}
+        </li>
       ))}
     </div>
   );

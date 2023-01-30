@@ -9,7 +9,7 @@ const InputField = (props: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   return (
     <form
-      className="flex w-11/12 relative items-center"
+      className="flex w-8/12 relative items-center"
       onSubmit={(e) => {
         props.handleAddTodo(e);
         inputRef.current?.blur();
@@ -23,7 +23,7 @@ const InputField = (props: InputProps) => {
         placeholder="Enter todo here"
         className="w-full px-8 py-5 text-2xl border-none transition duration-200 rounded-3xl"
       />
-      <button className="absolute right-0 w-12 h-12 m-3 rounded-3xl">
+      <button className="absolute right-0 w-12 h-12 m-3 rounded-3xl bg-gray-700 text-white">
         Enter
       </button>
     </form>
